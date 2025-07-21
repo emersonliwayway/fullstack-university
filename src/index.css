@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  margin: 3rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: first baseline;
+  margin: 0.5rem 0;
+  font-size: larger;
+}
+
+header nav {
+  display: flex;
+  gap: 1ch;
+}
