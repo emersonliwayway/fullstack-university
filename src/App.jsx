@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
-import "./App.css";
-import Home from "./layout/Home";
+import "./index.css";
+import Home from "./Home";
 import Departments from "./departments/Departments";
 import DepartmentPage from "./departments/DepartmentPage";
 import Faculty from "./faculty/Faculty";
@@ -10,7 +10,6 @@ function App() {
   // routes here
   return (
     <>
-      <h1>Fullstack University</h1>
       <Routes>
         <Route index element={<Home />} />
         <Route path="/departments" element={<Departments />} />
