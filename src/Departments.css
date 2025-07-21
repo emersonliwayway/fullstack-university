@@ -1,0 +1,12 @@
+#departmentContainer{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+.departmentBox{
+    border: solid 1px black;
+    
+}
+.dImg{
+    height: 200px;
+}
