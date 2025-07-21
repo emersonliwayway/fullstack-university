@@ -5,6 +5,8 @@ import Departments from "./departments/Departments";
 import DepartmentPage from "./departments/DepartmentPage";
 import Faculty from "./faculty/Faculty";
 import FacultyDetails from "./faculty/FacultyDetails";
+import Login from "./auth/Login";
+import Register from "./auth/Register";
 
 function App() {
   // routes here
@@ -16,6 +18,8 @@ function App() {
         <Route path="/departments/:id" element={<DepartmentPage />} />
         <Route path="/faculty" element={<Faculty />} />
         <Route path="/faculty/:id" element={<FacultyDetails />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
       </Routes>
     </>
   );
