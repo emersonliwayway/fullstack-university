@@ -9,6 +9,9 @@ import Login from "./auth/Login";
 import Register from "./auth/Register";
 import "./Departments.css";
 import "./faculty.css";
+import "./departmentpage.css";
+
+
 
 function App() {
   // routes here

@@ -1,0 +1,39 @@
+#selectedDepartment{
+    background-color: grey;
+}
+#selectedContainer{
+    display: flex;
+    justify-content: center;
+
+}
+#infoContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 10px;
+    
+
+}
+.sdImg{
+    height: 300px;
+    padding: 20px;
+    transition: all 1s ease;
+}
+.sdImg:hover{
+    height: 310px;
+
+}
+#dfTitle{
+    text-align: center;
+    margin: 10px;
+}
+#facultyRelations{
+    display: grid;
+    grid-template-columns: 400px 400px 400px;
+    grid-template-rows: 400px 400px;
+    place-content: center;
+    column-gap: 20px;
+    row-gap: 20px;
+    padding: 20px;
+    text-align: center;
+}
