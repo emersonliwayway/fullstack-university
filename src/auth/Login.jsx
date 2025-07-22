@@ -14,13 +14,12 @@ export default function Login() {
     const password = formData.get("password");
     try {
       await login({ email, password });
-      navigate("/books");
+      navigate("/");
     } catch (e) {
       setError(e.message);
     }
   };
 
-  //   edit this for specific project (originally from book buddies)
   // ***note classnames
   return (
     <>
