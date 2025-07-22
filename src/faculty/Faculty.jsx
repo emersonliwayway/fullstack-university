@@ -1,22 +1,14 @@
-import faculty from "../dummy data/faculty";
-import { useNavigate } from "react-router";
-import { Link } from "react-router";
-import AddFaculty from "./AddFaculty";
+import useQuery from "../api/useQuery";
 
 export default function Faculty() {
+  const { data: faculty, loading, error } = useQuery("/faculty", "faculty");
+  if (loading || !faculty) return <p>Loading...</p>;
+  if (error) return <p>Sorry! {error}</p>;
   console.log(faculty);
-  const navigate = useNavigate();
+
   return (
     <>
       <h1>Faculty</h1>
-      {faculty.map((e) => (
-        <Link to={`/faculty/${e.id}`}>
-          <li key={e.id}>
-            {e.fname} {e.lname}
-          </li>
-        </Link>
-      ))}
-      <AddFaculty />
     </>
   );
 }
