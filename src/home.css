@@ -1,0 +1,54 @@
+#homeTitle{
+    font-family: 'Raleway';
+    text-align: center;
+    font-weight: 900;
+    font-style: italic;
+    font-size: 100px;
+}
+#welcome{
+    font-family: 'dynalight';
+    text-align: center;
+    font-size: 50px;
+}
+#footer1{
+    text-align: center;
+    margin: 50px;
+}
+#homeContainer{
+    background-color: rgb(53, 51, 51);
+    border-radius: 20px;
+    border: solid 5px white;
+    box-shadow: 0px 0px 10px;
+    
+    
+
+}
+#homeInfo{
+    display: flex;
+    justify-content: center;
+    column-gap: 75px;
+    align-items: center;
+    padding: 30px;
+
+   
+
+}
+#homeImg{
+    height: 200px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 8px 
+}
+#nowAccepting{
+    font-family: 'chewy';
+    font-size: 35px;
+    -webkit-text-stroke: 1px white;
+    color: lightblue;
+    transition: all ease 1s ;
+    width: 550px;
+
+}
+#nowAccepting:hover{
+    font-size: 45px;
+    
+
+}

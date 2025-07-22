@@ -1,8 +1,8 @@
 export default function Departments() {
   return (
     <>
-      <h1>Departments</h1>
-      <p>List of departments</p>
+      <h1 id="departmentTitle">Departments</h1>
+      <p id="listOfDepartments">List of departments</p>
 
     <div id="departmentContainer2">
       <div id="departmentContainer">

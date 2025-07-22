@@ -1,8 +1,26 @@
+#departmentTitle{
+    font-family: 'Raleway';
+    text-align: center;
+    font-weight: 900;
+    font-style: italic;
+    font-size: 80px;
+    
+}
+#listOfDepartments{
+    font-family: 'dynalight';
+    text-align: center;
+    font-size: 50px;
+}
+
 #departmentContainer2{
     display: flex;
     background-color: rgb(53, 51, 51);
     align-content: center;
     justify-content: center;
+    border-radius: 20px;
+    border: solid 5px white;
+    box-shadow: 0px 0px 10px;
+    margin: 10px;
 }
 
 
