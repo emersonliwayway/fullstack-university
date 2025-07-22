@@ -1,6 +1,7 @@
 import faculty from "../dummy data/faculty";
 import { useNavigate } from "react-router";
 import { Link } from "react-router";
+import AddFaculty from "./AddFaculty";
 
 export default function Faculty() {
   console.log(faculty);
@@ -15,6 +16,7 @@ export default function Faculty() {
           </li>
         </Link>
       ))}
+      <AddFaculty />
     </>
   );
 }
