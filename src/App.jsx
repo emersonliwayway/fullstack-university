@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import "./index.css";
+import "./auth.css";
 import Home from "./Home";
 import Departments from "./departments/Departments";
 import DepartmentPage from "./departments/DepartmentPage";

@@ -1,0 +1,12 @@
+.loginForm {
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.loginForm > a {
+  text-decoration: underline;
+}
+
+.loginForm > a:hover {
+  cursor: pointer;
+}

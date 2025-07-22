@@ -10,18 +10,13 @@ export default function Register() {
   const [error, setError] = useState(null);
 
   const tryRegister = async (formData) => {
-    const firstname = formData.get("firstname");
-    const lastname = formData.get("lastname");
+    const username = formData.get("username");
     const email = formData.get("email");
     const password = formData.get("password");
+    const is_admin = true;
     try {
-      if (firstname && lastname) {
-        await register({ firstname, lastname, email, password });
-      } else {
-        await register({ email, password });
-      }
-      //   navigate to home page, edit for specific route
-      //   navigate("/home");
+      await register({ username, email, password, is_admin });
+      navigate("/");
     } catch (e) {
       setError(e.message);
     }
@@ -34,13 +29,9 @@ export default function Register() {
     <>
       <h1>Register for an account</h1>
       <form action={tryRegister} className="loginForm">
-        <label className="firstname">
-          First name
-          <input type="text" name="firstname" required />
-        </label>
-        <label className="lastname">
-          Last name
-          <input type="text" name="lastname" required />
+        <label className="username">
+          Username
+          <input type="text" name="username" required />
         </label>
         <label className="email">
           Email
