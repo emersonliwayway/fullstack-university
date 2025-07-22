@@ -13,10 +13,12 @@ export default function Faculty() {
   return (
     <>
       <h1 id="facultyTitle">Faculty</h1>
-
-      <ul>
+      {/* container for faculty */}
+      
+    <div id="facultyContainer2">
+      <ul id="facultyContainer">
         {faculty.map((e) => (
-          <li key={e.id}>
+          <li className="box" key={e.id}>
             <div onClick={() => navigate(`/faculty/${e.id}`)}>
               <h3 className="fTitle">{e.name}</h3>
               <DepartmentName id={e.department_id} />
@@ -25,6 +27,8 @@ export default function Faculty() {
           </li>
         ))}
       </ul>
+    </div>
+      
     </>
   );
 }
