@@ -8,6 +8,7 @@ import FacultyDetails from "./faculty/FacultyDetails";
 import Login from "./auth/Login";
 import Register from "./auth/Register";
 import "./Departments.css";
+import "./faculty.css";
 
 function App() {
   // routes here

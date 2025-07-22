@@ -1,0 +1,32 @@
+#facultyTitle{
+    text-align: center;
+}
+#facultyContainer{
+    display: grid;
+    grid-template-columns: 400px 400px 400px;
+    grid-template-rows: 400px 400px;
+    place-content: center;
+    column-gap: 20px;
+    row-gap: 20px;
+    padding: 20px;
+    text-align: center;
+}
+.fImg{
+    border: solid 1px black;
+    height: 125px;
+    margin: 20px;
+}
+.fTitle{
+    font-size: 25px;
+    margin: 10px;
+}
+.box{
+    border: 1px solid black;
+    transition: all 1s ease;
+    background-image: linear-gradient(grey,white, grey);
+    
+}
+.box:hover{
+    border-radius: 50px;
+   
+}
