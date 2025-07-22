@@ -24,7 +24,9 @@ export default function Login() {
   // ***note classnames
   return (
     <>
-      <h1>Login to your account</h1>
+    <div id="loginContainer">
+      <h1 id="loginTitle">Login to your account</h1>
+      
       <form action={tryLogin} className="loginForm">
         <label className="email">
           Email
@@ -40,6 +42,7 @@ export default function Login() {
           Need an account? Register here.
         </a>
       </form>
+    </div>
     </>
   );
 }

@@ -32,8 +32,9 @@ export default function Register() {
 
   return (
     <>
-      <h1>Register for an account</h1>
-      <form action={tryRegister} className="loginForm">
+    <div id="registerContainer">
+      <h1 id="registerTitle">Register for an account</h1>
+      <form action={tryRegister} className="registerForm">
         <label className="firstname">
           First name
           <input type="text" name="firstname" required />
@@ -56,6 +57,7 @@ export default function Register() {
           Already have an account? Login here.
         </a>
       </form>
+      </div>
     </>
   );
 }

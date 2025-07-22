@@ -10,6 +10,8 @@ import Register from "./auth/Register";
 import "./Departments.css";
 import "./faculty.css";
 import "./departmentpage.css";
+import "./login.css"
+import "./register.css"
 
 
 

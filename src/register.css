@@ -1,0 +1,17 @@
+#registerContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+    
+}
+#registerTitle{
+    padding: 25px;
+}
+.registerForm{
+    display: flex;
+    border: solid 1px black;
+
+}
