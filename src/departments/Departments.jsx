@@ -4,6 +4,7 @@ export default function Departments() {
       <h1>Departments</h1>
       <p>List of departments</p>
 
+    <div id="departmentContainer2">
       <div id="departmentContainer">
 
 
@@ -41,6 +42,7 @@ export default function Departments() {
         </div>
 
       </div>
+    </div>
     </>
   );
 }

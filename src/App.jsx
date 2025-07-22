@@ -12,6 +12,7 @@ import "./faculty.css";
 import "./departmentpage.css";
 import "./login.css"
 import "./register.css"
+import "./facultydetails.css"
 
 
 
