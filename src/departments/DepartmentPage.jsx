@@ -1,7 +1,5 @@
+import { useParams, useNavigate } from "react-router";
+
 export default function DepartmentPage() {
-  return (
-    <>
-      <h1>Department Title</h1>
-    </>
-  );
+  const { id } = useParams();
 }

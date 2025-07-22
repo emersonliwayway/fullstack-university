@@ -8,7 +8,7 @@ const departments = [
     imgUrl: "imgURl",
     phone: "000-000-0000",
     email: "department1@fsu.com",
-    faculty: [1, 2],
+    faculty: 1,
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ const departments = [
     imgUrl: "imgURl2",
     phone: "111-111-1111",
     email: "department2@fsu.com",
-    faculty: [1, 2],
+    faculty: 2,
   },
 ];
 

@@ -1,3 +1,5 @@
+import departments from "./departments";
+
 const faculty = [
   {
     id: 1,
@@ -7,6 +9,7 @@ const faculty = [
     profile: "imgUrl",
     phone: "333-333-3333",
     email: "yoshi@fsu.com",
+    department: 1,
   },
   {
     id: 2,
@@ -16,6 +19,7 @@ const faculty = [
     profile: "imgUrl",
     phone: "444-444-4444",
     email: "bosco@fsu.com",
+    department: 2,
   },
 ];
 
