@@ -29,7 +29,7 @@ export default function Faculty() {
   );
 }
 
-function DepartmentName({ id }) {
+export function DepartmentName({ id }) {
   const {
     data: departments,
     loading,
@@ -39,7 +39,6 @@ function DepartmentName({ id }) {
   if (error) return <p>Sorry! {error}</p>;
 
   const department = departments.find((department) => department.id === id);
-  console.log(department);
 
   return (
     <>
