@@ -14,10 +14,14 @@
 }
 .departmentBox{
     width: 1000px;
-    border: solid 1px black;
+    border: solid 1px white;
     border-radius: 20px;
     background-image: linear-gradient(grey,white,grey);
+    transition: ease 1s all;
     
+}
+.departmentBox:hover{
+    box-shadow: 0px 0px 8px rgb(255, 255, 255);
 }
 .contentsContainer{
     display: flex;

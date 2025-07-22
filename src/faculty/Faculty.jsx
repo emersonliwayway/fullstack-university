@@ -2,7 +2,7 @@ export default function Faculty() {
   return (
     <>
       <h1 id="facultyTitle">Faculty</h1>
-
+    <div id="facultyContainer2">
       <div id="facultyContainer">
         <div className="box">
             <img className="fImg" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt="" />
@@ -26,6 +26,7 @@ export default function Faculty() {
         <div className="box"></div>
         <div className="box"></div>
       </div>
+    </div>
     </>
   );
 }
