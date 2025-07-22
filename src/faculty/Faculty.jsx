@@ -12,7 +12,7 @@ export default function Faculty() {
 
   return (
     <>
-      <h1>Faculty</h1>
+      <h1 id="facultyTitle">Faculty</h1>
 
       <ul>
         {faculty.map((e) => (
