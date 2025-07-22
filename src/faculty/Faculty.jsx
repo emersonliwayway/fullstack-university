@@ -1,6 +1,6 @@
 import useQuery from "../api/useQuery";
 import { Link } from "react-router";
-import AddFaculty from "./AddFaculty";
+import AddFaculty from "./FacultyForm";
 import { useAuth } from "../auth/AuthContext";
 import { useNavigate } from "react-router";
 
