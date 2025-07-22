@@ -16,14 +16,30 @@ export default function DepartmentPage() {
   return (
     <>
       <h1>Department Details</h1>
-      {department && (
-        <div>
-          <h2>{department.name}</h2>
-          <p>{department.description}</p>
-          <img src={department.banner_image} alt={department.name} />
-          <p>{department.contact_info}</p>
-        </div>
-      )}
+      {/* {department &&
+        department.map((e) => (
+          <div key={e.id}>
+            <h2>{e.name}</h2>
+          </div>
+        ))} */}
+    </>
+  );
+}
+
+function DepartmentFaculty() {
+  const { id } = useParams();
+  const { data: faculty, loading, error } = useQuery("/faculty", "faculty");
+
+  if (loading || !faculty) return <p>Loading...</p>;
+  if (error) return <p>Sorry! {error}</p>;
+
+  const list = faculty.filter((e) => {
+    return e.department_id === id;
+  });
+
+  return (
+    <>
+      <p>Test</p>
     </>
   );
 }
