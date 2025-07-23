@@ -18,6 +18,7 @@ export default function Departments() {
   return (
     <>
       <h1 id="departmentTitle">Departments</h1>
+      <div id="departmentContainer">
       {user && token && <DepartmentForm />}
       {departments.map((e) => (
         <div
@@ -27,6 +28,7 @@ export default function Departments() {
         >
           <div id="departmentInfo">
             <img className="dImg" src={e.banner_image} alt={e.name} />
+            <div id="departmentInfo2">
             <h2 className="dN">{e.name}</h2>
             <p className="dP">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -34,9 +36,11 @@ export default function Departments() {
               inventore deleniti debitis, natus voluptas aperiam consequuntur
               provident eos illo rerum sint placeat adipisci nihil.
             </p>
+            </div>
           </div>
         </div>
       ))}
+      </div>
     </>
   );
   // return (
