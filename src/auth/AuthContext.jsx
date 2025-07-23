@@ -15,7 +15,11 @@ export function AuthProvider({ children }) {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
-    if (!token) return;
+    const token = localStorage.getItem("token");
+
+    if (!token) {
+      return;
+    }
 
     const verify = async () => {
       const response = await fetch(API + "/users/me", {
@@ -26,6 +30,7 @@ export function AuthProvider({ children }) {
         body: JSON.stringify({ jwt: token }),
       });
       const result = await response.json();
+
       if (!response.ok) {
         console.log("There was an issue processing the token.");
         localStorage.removeItem("token");
@@ -38,7 +43,7 @@ export function AuthProvider({ children }) {
     };
 
     verify();
-  }, [token]);
+  });
 
   const register = async (credentials) => {
     const response = await fetch(API + "/users/register", {
