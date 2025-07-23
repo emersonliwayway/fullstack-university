@@ -23,8 +23,11 @@ export default function Login() {
   // ***note classnames
   return (
     <>
-      <h1>Login to your account</h1>
+      <h1 id="loginTitle">Login to your account</h1>
+      <div id="formContainer">
+  
       <form action={tryLogin} className="loginForm">
+        <div id="emailPassword">
         <label className="email">
           Email
           <input type="text" name="email" required />
@@ -33,12 +36,14 @@ export default function Login() {
           Password
           <input type="password" name="password" required />
         </label>
+        </div>
         <button className="loginButton">Login</button>
         {error && <output>{error}</output>}
-        <a onClick={() => navigate("/register")}>
+        <a id="registerSentence" onClick={() => navigate("/register")}>
           Need an account? Register here.
         </a>
       </form>
+      </div>
     </>
   );
 }
