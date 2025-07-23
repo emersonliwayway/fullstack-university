@@ -28,7 +28,9 @@ export default function Register() {
   return (
     <>
       <h1>Register for an account</h1>
+      <div id="formContainer">
       <form action={tryRegister} className="loginForm">
+        <div id="emailPassword">
         <label className="username">
           Username
           <input type="text" name="username" required />
@@ -41,12 +43,14 @@ export default function Register() {
           Password
           <input type="password" name="password" required />
         </label>
+        </div>
         <button className="registerButton">Register</button>
         {error && <output>{error}</output>}
-        <a onClick={() => navigate("/login")}>
+        <a id="registerSentence" onClick={() => navigate("/login")}>
           Already have an account? Login here.
         </a>
       </form>
+      </div>
     </>
   );
 }
