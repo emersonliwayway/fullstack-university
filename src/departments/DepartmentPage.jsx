@@ -20,13 +20,15 @@ export default function DepartmentPage() {
 
   return (
     <>
-      <h1>{department.name} Details</h1>
+      <h1 id="dDetailsTitle">{department.name} Details</h1>
+      <div id="departmentDetailsContainer">
       <div className="departmentDetails">
         <p>{department.description}</p>
         <DepartmentFaculty id={id} />
         {user && token && <DeleteDepartment department={department} />}
         {user && token && <button>Add faculty to department</button>}
         <button onClick={() => navigate("/departments")}>Back</button>
+      </div>
       </div>
     </>
   );

@@ -35,6 +35,7 @@
     margin: 20px;
     border-radius: 20px;
     transition: all ease 1s;
+    border: solid black;
 }
 #departmentInfo{
     display: flex;
@@ -44,4 +45,25 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+.dN{
+    font-family: 'Raleway';
+    font-weight: 900;
+    font-style: italic;
+    text-indent: 10px;
+    color: black;
+    background-image: linear-gradient(to right,lightblue,
+    transparent);
+    border-radius: 10px;
+    margin: 10px;
+    
+}
+.dP{
+    text-align: center;
+    font-size: larger;
+    opacity: 0;
+    transition: all 1s ease;
+}
+.dP:hover{
+    opacity: 1;
 }

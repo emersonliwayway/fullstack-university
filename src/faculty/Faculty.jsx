@@ -23,7 +23,7 @@ export default function Faculty() {
               <div onClick={() => navigate(`/faculty/${e.id}`)}>
                 <h3 className="fTitle">{e.name}</h3>
                 <DepartmentName id={e.department_id} />
-                <img src={e.profile_pic} alt={e.name} />
+                <img className="fImg" src={e.profile_pic} alt={e.name} />
               </div>
             </li>
           ))}

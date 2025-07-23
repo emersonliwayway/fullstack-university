@@ -29,10 +29,17 @@
 }
 .fImg{
     border: solid 1px black;
-    height: 125px;
+    height: 250px;
     margin: 20px;
+    transition: all 1s ease;
+}
+.fImg:hover{
+    border-radius: 20px;
 }
 .fTitle{
+    font-family: 'Raleway';
+    font-weight: 900;
+    font-style: italic;
     font-size: 25px;
     margin: 10px;
 }
