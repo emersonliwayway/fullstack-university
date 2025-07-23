@@ -29,11 +29,13 @@ export default function FacultyDetails() {
               src={faculty.profile_pic}
               alt={faculty.name}
             />
-            <h2>{faculty.name}</h2>
+            <h2 id="pName">{faculty.name}</h2>
+            <div id="professorInfo">
             <DepartmentName id={faculty.department_id} />
             <p>{faculty.bio}</p>
             <p>{faculty.email}</p>
             {token && <DeleteFaculty faculty={faculty} />}
+            </div>
           </div>
         )}
       </div>

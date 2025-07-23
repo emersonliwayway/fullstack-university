@@ -25,8 +25,8 @@ export default function Departments() {
           <div id="departmentInfo">
           <img className="dImg" src={e.banner_image} alt={e.name} />
           <div id="departmentInfo2">
-          <h2>{e.name}</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, facere laudantium! Atque necessitatibus reiciendis et inventore deleniti debitis, natus voluptas aperiam consequuntur provident eos illo rerum sint placeat adipisci nihil.</p>
+          <h2 className="dN">{e.name}</h2>
+          <p className="dP">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, facere laudantium! Atque necessitatibus reiciendis et inventore deleniti debitis, natus voluptas aperiam consequuntur provident eos illo rerum sint placeat adipisci nihil.</p>
             </div>
           </div>
         </div>
