@@ -25,24 +25,23 @@ export default function Login() {
     <>
       <h1 id="loginTitle">Login to your account</h1>
       <div id="formContainer">
-  
-      <form action={tryLogin} className="loginForm">
-        <div id="emailPassword">
-        <label className="email">
-          Email
-          <input type="text" name="email" required />
-        </label>
-        <label className="password">
-          Password
-          <input type="password" name="password" required />
-        </label>
-        </div>
-        <button className="loginButton">Login</button>
-        {error && <output>{error}</output>}
-        <a id="registerSentence" onClick={() => navigate("/register")}>
-          Need an account? Register here.
-        </a>
-      </form>
+        <form action={tryLogin} className="loginForm">
+          <div id="emailPassword">
+            <label className="email">
+              Email
+              <input type="text" name="email" required />
+            </label>
+            <label className="password">
+              Password
+              <input type="password" name="password" required />
+            </label>
+          </div>
+          <button className="loginButton">Login</button>
+          {error && <output>{error}</output>}
+          <a id="registerSentence" onClick={() => navigate("/register")}>
+            Need an account? Register here.
+          </a>
+        </form>
       </div>
     </>
   );

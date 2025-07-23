@@ -8,7 +8,7 @@ import EditFaculty from "./EditFaculty";
 export default function FacultyDetails() {
   const { id } = useParams();
   const navigate = useNavigate();
-  const { token } = useAuth();
+  const { user, token } = useAuth();
 
   const {
     data: faculty,
@@ -33,7 +33,7 @@ export default function FacultyDetails() {
             <DepartmentName id={faculty.department_id} />
             <p>{faculty.bio}</p>
             <p>{faculty.email}</p>
-            {token && <DeleteFaculty faculty={faculty} />}
+            {user && token && <DeleteFaculty faculty={faculty} />}
           </div>
         )}
       </div>
