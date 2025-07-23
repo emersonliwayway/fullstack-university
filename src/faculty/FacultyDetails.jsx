@@ -2,9 +2,12 @@ import { useNavigate, useParams } from "react-router";
 import useQuery from "../api/useQuery";
 import { useAuth } from "../auth/AuthContext";
 import { DepartmentName } from "./Faculty";
+import DeleteFaculty from "./DeleteFaculty";
 
 export default function FacultyDetails() {
   const { id } = useParams();
+  const navigate = useNavigate();
+  const { token } = useAuth();
 
   const {
     data: faculty,
@@ -18,21 +21,18 @@ export default function FacultyDetails() {
     <>
       <h1 id="facultyDetailsTitle">Faculty Details</h1>
       <div id="professorContainer">
-      {faculty &&
-        faculty.map((e) => (
-          <div key={e.id}>
-            <div id="professorInfo2">
-            <div id="professorInfo">
-            <h2>{e.name}</h2>
-            <DepartmentName id={e.department_id} />
-            <p>{e.bio}</p>
-            <p>{e.email}</p>
-            </div>
-            <img className="pImg" src={e.profile_pic} alt={e.name} />
+        {faculty && (
+          <div>
+            <h2>{faculty.name}</h2>
+            <DepartmentName id={faculty.department_id} />
+            <p>{faculty.bio}</p>
+            <p>{faculty.email}</p>
+            <img src={faculty.profile_pic} alt={faculty.name} />
+            {token && <DeleteFaculty faculty={faculty} />}
           </div>
-          </div>
-        ))}
-        </div>
+        )}
+      </div>
+      <button onClick={() => navigate("/faculty")}>Back</button>
     </>
   );
 }

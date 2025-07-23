@@ -1,5 +1,4 @@
 import useMutation from "../api/useMutation";
-
 export default function DepartmentForm() {
   const {
     mutate: createDepartment,
@@ -17,7 +16,9 @@ export default function DepartmentForm() {
     const name = FormData.get("name");
     const description = FormData.get("description");
     const contact_info = FormData.get("contact");
-    const banner_image = FormData.get("banner_image") || "https://randomwordgenerator.com/img/picture-generator/54e6d1474c5bab14f1dc8460962e33791c3ad6e04e507749772f78d69e48cd_640.jpg";
+    const banner_image =
+      FormData.get("banner_image") ||
+      "https://randomwordgenerator.com/img/picture-generator/54e6d1474c5bab14f1dc8460962e33791c3ad6e04e507749772f78d69e48cd_640.jpg";
 
     createDepartment({ name, description, banner_image, contact_info });
   };
@@ -32,14 +33,13 @@ export default function DepartmentForm() {
         </label>
         <label>
           Description
-          {/* <input type="text" name="description" required /> */}
           <textarea name="description" id="description"></textarea>
         </label>
         <label>
           Contact
-          <input type="text" name="contact" required />
+          <textarea name="contact" id="contact"></textarea>
         </label>
-        <button>Create</button>
+        <button type="submit">Add department</button>
       </form>
     </>
   );
