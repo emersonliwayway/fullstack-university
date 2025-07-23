@@ -43,7 +43,7 @@ export function AuthProvider({ children }) {
     };
 
     verify();
-  });
+  }, [token]);
 
   const register = async (credentials) => {
     const response = await fetch(API + "/users/register", {
