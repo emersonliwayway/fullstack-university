@@ -19,39 +19,63 @@ export default function Departments() {
     <>
       <h1 id="departmentTitle">Departments</h1>
       {user && token && <DepartmentForm />}
-      <div id="departmentContainer">
-
       {departments.map((e) => (
-        <div className="departmentBox" key={e.id} onClick={() => navigate(`/departments/${e.id}`)}>
+        <div
+          className="departmentBox"
+          key={e.id}
+          onClick={() => navigate(`/departments/${e.id}`)}
+        >
           <div id="departmentInfo">
-          <img className="dImg" src={e.banner_image} alt={e.name} />
-          <div id="departmentInfo2">
-          <h2 className="dN">{e.name}</h2>
-          <p className="dP">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, facere laudantium! Atque necessitatibus reiciendis et inventore deleniti debitis, natus voluptas aperiam consequuntur provident eos illo rerum sint placeat adipisci nihil.</p>
-
-        {departments.map((e) => (
-          <div
-            className="departmentBox"
-            key={e.id}
-            onClick={() => navigate(`/departments/${e.id}`)}
-          >
-            <div id="departmentInfo">
-              <img className="dImg" src={e.banner_image} alt={e.name} />
-              <div id="departmentInfo2">
-                <h2>{e.name}</h2>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Quibusdam, facere laudantium! Atque necessitatibus reiciendis
-                  et inventore deleniti debitis, natus voluptas aperiam
-                  consequuntur provident eos illo rerum sint placeat adipisci
-                  nihil.
-                </p>
-              </div>
-
-            </div>
+            <img className="dImg" src={e.banner_image} alt={e.name} />
+            <h2 className="dN">{e.name}</h2>
+            <p className="dP">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Quibusdam, facere laudantium! Atque necessitatibus reiciendis et
+              inventore deleniti debitis, natus voluptas aperiam consequuntur
+              provident eos illo rerum sint placeat adipisci nihil.
+            </p>
           </div>
-        ))}
-      </div>
+        </div>
+      ))}
     </>
   );
+  // return (
+  //   <>
+  //     <h1 id="departmentTitle">Departments</h1>
+  //     {user && token && <DepartmentForm />}
+  //     <div id="departmentContainer">
+
+  //     {departments.map((e) => (
+  //       <div className="departmentBox" key={e.id} onClick={() => navigate(`/departments/${e.id}`)}>
+  //         <div id="departmentInfo">
+  //         <img className="dImg" src={e.banner_image} alt={e.name} />
+  //         <div id="departmentInfo2">
+  //         <h2 className="dN">{e.name}</h2>
+  //         <p className="dP">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, facere laudantium! Atque necessitatibus reiciendis et inventore deleniti debitis, natus voluptas aperiam consequuntur provident eos illo rerum sint placeat adipisci nihil.</p>
+
+  //       {departments.map((e) => (
+  //         <div
+  //           className="departmentBox"
+  //           key={e.id}
+  //           onClick={() => navigate(`/departments/${e.id}`)}
+  //         >
+  //           <div id="departmentInfo">
+  //             <img className="dImg" src={e.banner_image} alt={e.name} />
+  //             <div id="departmentInfo2">
+  //               <h2>{e.name}</h2>
+  //               <p>
+  //                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+  //                 Quibusdam, facere laudantium! Atque necessitatibus reiciendis
+  //                 et inventore deleniti debitis, natus voluptas aperiam
+  //                 consequuntur provident eos illo rerum sint placeat adipisci
+  //                 nihil.
+  //               </p>
+  //             </div>
+
+  //           </div>
+  //         </div>
+  //       ))}
+  //     </div>
+  //   </>
+  // );
 }
