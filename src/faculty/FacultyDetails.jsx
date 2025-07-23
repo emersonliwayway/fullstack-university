@@ -16,17 +16,23 @@ export default function FacultyDetails() {
 
   return (
     <>
-      <h1>Faculty Details</h1>
+      <h1 id="facultyDetailsTitle">Faculty Details</h1>
+      <div id="professorContainer">
       {faculty &&
         faculty.map((e) => (
           <div key={e.id}>
+            <div id="professorInfo2">
+            <div id="professorInfo">
             <h2>{e.name}</h2>
             <DepartmentName id={e.department_id} />
             <p>{e.bio}</p>
             <p>{e.email}</p>
-            <img src={e.profile_pic} alt={e.name} />
+            </div>
+            <img className="pImg" src={e.profile_pic} alt={e.name} />
+          </div>
           </div>
         ))}
+        </div>
     </>
   );
 }

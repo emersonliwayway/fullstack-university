@@ -1,0 +1,37 @@
+#facultyDetailsTitle{
+     font-family: 'Raleway';
+    text-align: center;
+    font-weight: 900;
+    font-style: italic;
+    font-size: 80px;
+}
+
+
+#professorContainer{
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient(darkgrey,white,grey);
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px black;
+    border: white 1px solid;
+    margin: 20px;
+    
+}
+#professorInfo2{
+    display: flex;
+    
+}
+#professorInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    row-gap: 10px;
+    margin: 20px;
+    text-align: center;
+}
+.pImg{
+    height: 200px;
+    padding: 20px;
+    
+}
