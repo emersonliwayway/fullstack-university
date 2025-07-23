@@ -22,7 +22,7 @@ export default function FacultyDetails() {
       <h1 id="facultyDetailsTitle">Faculty Details</h1>
       <div id="professorContainer">
         {faculty && (
-          <div>
+          <div id="professorContainer2">
             <h2>{faculty.name}</h2>
             <DepartmentName id={faculty.department_id} />
             <p>{faculty.bio}</p>
