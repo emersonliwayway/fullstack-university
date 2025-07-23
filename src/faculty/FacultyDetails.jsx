@@ -3,6 +3,7 @@ import useQuery from "../api/useQuery";
 import { useAuth } from "../auth/AuthContext";
 import { DepartmentName } from "./Faculty";
 import DeleteFaculty from "./DeleteFaculty";
+import EditFaculty from "./EditFaculty";
 
 export default function FacultyDetails() {
   const { id } = useParams();
@@ -29,6 +30,7 @@ export default function FacultyDetails() {
             <p>{faculty.email}</p>
             <img src={faculty.profile_pic} alt={faculty.name} />
             {token && <DeleteFaculty faculty={faculty} />}
+            {token && <EditFaculty />}
           </div>
         )}
       </div>

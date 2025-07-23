@@ -23,6 +23,7 @@ export default function DepartmentPage() {
         <p>{department.description}</p>
         <DepartmentFaculty id={id} />
         {token && <DeleteDepartment department={department} />}
+        {token && <button>Add faculty to department</button>}
       </div>
     </>
   );
@@ -49,3 +50,5 @@ function DepartmentFaculty({ id }) {
     </>
   );
 }
+
+function AddFaculty({}) {}
