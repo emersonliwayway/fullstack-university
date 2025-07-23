@@ -1,8 +1,11 @@
 import { useParams } from "react-router";
 import useQuery from "../api/useQuery";
+import DeleteDepartment from "./DeleteDepartment";
+import { useAuth } from "../auth/AuthContext";
 
 export default function DepartmentPage() {
   const { id } = useParams();
+  const { token } = useAuth();
 
   const {
     data: department,
@@ -18,26 +21,31 @@ export default function DepartmentPage() {
       <h1>{department.name} Details</h1>
       <div className="departmentDetails">
         <p>{department.description}</p>
-        <DepartmentFaculty/>
+        <DepartmentFaculty id={id} />
+        {token && <DeleteDepartment department={department} />}
       </div>
     </>
   );
 }
 
-function DepartmentFaculty() {
-  const { id } = useParams();
-  const { data: faculty, loading, error } = useQuery(`/departments/${id}/faculty`, "faculty");
+function DepartmentFaculty({ id }) {
+  const {
+    data: faculty,
+    loading,
+    error,
+  } = useQuery(`/departments/${id}/faculty`, "faculty");
 
   if (loading || !faculty) return <p>Loading...</p>;
   if (error) return <p>Sorry! {error}</p>;
 
   return (
-    <div className="departmentFaculty">
-      {faculty.map(employee => {
-        return <div className="departmentEmployee" key={employee.id}>
-          {employee.name}
-        </div>
-      })}
-    </div>
+    <>
+      {faculty &&
+        faculty.map((e) => (
+          <div className="departmentEmployee" key={e.id}>
+            <li>{e.name}</li>
+          </div>
+        ))}
+    </>
   );
 }
