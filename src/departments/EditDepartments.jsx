@@ -8,5 +8,5 @@ export default function EditDepartments() {
     mutate: updateFaculty,
     loading,
     error,
-  } = useMutation("UPDATE", `/departments`, ["department"]);
+  } = useMutation("PUT", `/departments/${id}`, ["department"]);
 }

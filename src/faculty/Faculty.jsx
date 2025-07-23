@@ -6,7 +6,7 @@ import FacultyForm from "./FacultyForm";
 
 export default function Faculty() {
   const navigate = useNavigate();
-  const { user } = useAuth();
+  const { user, token } = useAuth();
   const { data: faculty, loading, error } = useQuery("/faculty", "faculty");
   if (loading || !faculty) return <p>Loading...</p>;
   if (error) return <p>Sorry! {error}</p>;
@@ -14,7 +14,7 @@ export default function Faculty() {
   return (
     <>
       <h1 id="facultyTitle">Faculty</h1>
-      {user && <FacultyForm />}
+      {user && token && <FacultyForm />}
 
       <div id="facultyContainer2">
         <ul id="facultyContainer">
