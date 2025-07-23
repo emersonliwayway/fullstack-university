@@ -11,6 +11,7 @@ import Register from "./auth/Register";
 import "./faculty.css"
 import "./home.css"
 import "./facultydetails.css"
+import "./department.css"
 
 function App() {
   // routes here

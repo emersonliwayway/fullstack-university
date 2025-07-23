@@ -17,7 +17,7 @@ export default function Departments() {
 
   return (
     <>
-      <h1>Departments</h1>
+      <h1 id="departmentTitle">Departments</h1>
       {user && <DepartmentForm />}
 
       {departments.map((e) => (
