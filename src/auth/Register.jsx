@@ -27,7 +27,7 @@ export default function Register() {
 
   return (
     <>
-      <h1>Register for an account</h1>
+      <h1 id="loginTitle">Register for an account</h1>
       <div id="formContainer">
       <form action={tryRegister} className="loginForm">
         <div id="emailPassword">
