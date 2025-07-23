@@ -22,8 +22,10 @@ export default function Departments() {
       <div id="departmentContainer">
       {departments.map((e) => (
         <div className="departmentBox" key={e.id} onClick={() => navigate(`/departments/${e.id}`)}>
-          <h2>{e.name}</h2>
+          <div id="departmentInfo">
           <img className="dImg" src={e.banner_image} alt={e.name} />
+          <h2>{e.name}</h2>
+          </div>
         </div>
       ))}
       </div>
