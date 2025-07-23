@@ -55,3 +55,7 @@
     font-family: 'dynalight';
     font-size: 30px;
 }
+#backButton{
+    display: flex;
+    justify-content: center;
+}

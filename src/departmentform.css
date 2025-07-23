@@ -45,8 +45,9 @@ button{
     color: white;
     font-size: large;
     border-radius: 5px;
+    
 }
 button:hover{
-    background-color: lightblue;
+    
     color: black;
 }

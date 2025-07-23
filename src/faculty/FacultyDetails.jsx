@@ -41,7 +41,7 @@ export default function FacultyDetails() {
           </div>
         )}
       </div>
-      <button onClick={() => navigate("/faculty")}>Back</button>
+      <button id="backButton" onClick={() => navigate("/faculty")}>Back</button>
     </>
   );
 }
