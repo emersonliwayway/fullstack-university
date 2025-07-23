@@ -27,7 +27,6 @@ export default function DepartmentPage() {
           <p>{department.description}</p>
           <DepartmentFaculty id={id} />
           {user && token && <DeleteDepartment department={department} />}
-          {user && token && <button>Add faculty to department</button>}
           <button onClick={() => navigate("/departments")}>Back</button>
         </div>
       </div>
