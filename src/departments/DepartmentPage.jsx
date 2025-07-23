@@ -1,4 +1,4 @@
-import { useParams, useNavigate } from "react-router";
+import { useParams } from "react-router";
 import useQuery from "../api/useQuery";
 
 export default function DepartmentPage() {
@@ -15,31 +15,29 @@ export default function DepartmentPage() {
 
   return (
     <>
-      <h1>Department Details</h1>
-      {/* {department &&
-        department.map((e) => (
-          <div key={e.id}>
-            <h2>{e.name}</h2>
-          </div>
-        ))} */}
+      <h1>{department.name} Details</h1>
+      <div className="departmentDetails">
+        <p>{department.description}</p>
+        <DepartmentFaculty/>
+      </div>
     </>
   );
 }
 
 function DepartmentFaculty() {
   const { id } = useParams();
-  const { data: faculty, loading, error } = useQuery("/faculty", "faculty");
+  const { data: faculty, loading, error } = useQuery(`/departments/${id}/faculty`, "faculty");
 
   if (loading || !faculty) return <p>Loading...</p>;
   if (error) return <p>Sorry! {error}</p>;
 
-  const list = faculty.filter((e) => {
-    return e.department_id === id;
-  });
-
   return (
-    <>
-      <p>Test</p>
-    </>
+    <div className="departmentFaculty">
+      {faculty.map(employee => {
+        return <div className="departmentEmployee" key={employee.id}>
+          {employee.name}
+        </div>
+      })}
+    </div>
   );
 }

@@ -1,9 +1,12 @@
 import useQuery from "../api/useQuery";
 import { useNavigate } from "react-router";
 import DepartmentForm from "./DepartmentForm";
+import { useAuth } from "../auth/AuthContext";
 
 export default function Departments() {
   const navigate = useNavigate();
+  const { user } = useAuth();
+
   const {
     data: departments,
     loading,
@@ -15,7 +18,7 @@ export default function Departments() {
   return (
     <>
       <h1>Departments</h1>
-      <DepartmentForm />
+      {user && <DepartmentForm />}
 
       {departments.map((e) => (
         <div key={e.id} onClick={() => navigate(`/departments/${e.id}`)}>
