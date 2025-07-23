@@ -24,13 +24,16 @@ export default function FacultyDetails() {
       <div id="professorContainer">
         {faculty && (
           <div id="professorContainer2">
-            <img className="pImg" src={faculty.profile_pic} alt={faculty.name} />
+            <img
+              className="pImg"
+              src={faculty.profile_pic}
+              alt={faculty.name}
+            />
             <h2>{faculty.name}</h2>
             <DepartmentName id={faculty.department_id} />
             <p>{faculty.bio}</p>
             <p>{faculty.email}</p>
             {token && <DeleteFaculty faculty={faculty} />}
-            {token && <EditFaculty />}
           </div>
         )}
       </div>
