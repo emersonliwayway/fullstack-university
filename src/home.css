@@ -45,6 +45,7 @@
     color: lightblue;
     transition: all ease 1s ;
     width: 550px;
+    text-align: center;
 
 }
 #nowAccepting:hover{
