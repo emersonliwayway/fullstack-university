@@ -3,6 +3,7 @@ import useQuery from "../api/useQuery";
 import DeleteDepartment from "./DeleteDepartment";
 import { useAuth } from "../auth/AuthContext";
 import { useNavigate } from "react-router";
+import { Link } from "react-router";
 
 export default function DepartmentPage() {
   const { id } = useParams();
@@ -22,13 +23,13 @@ export default function DepartmentPage() {
     <>
       <h1 id="dDetailsTitle">{department.name} Details</h1>
       <div id="departmentDetailsContainer">
-      <div className="departmentDetails">
-        <p>{department.description}</p>
-        <DepartmentFaculty id={id} />
-        {user && token && <DeleteDepartment department={department} />}
-        {user && token && <button>Add faculty to department</button>}
-        <button onClick={() => navigate("/departments")}>Back</button>
-      </div>
+        <div className="departmentDetails">
+          <p>{department.description}</p>
+          <DepartmentFaculty id={id} />
+          {user && token && <DeleteDepartment department={department} />}
+          {user && token && <button>Add faculty to department</button>}
+          <button onClick={() => navigate("/departments")}>Back</button>
+        </div>
       </div>
     </>
   );
@@ -49,7 +50,7 @@ function DepartmentFaculty({ id }) {
       {faculty &&
         faculty.map((e) => (
           <div className="departmentEmployee" key={e.id}>
-            <li>{e.name}</li>
+            <Link to={`/faculty/${e.id}`}>{e.name}</Link>
           </div>
         ))}
     </>
