@@ -25,8 +25,9 @@ export default function DepartmentForm() {
 
   return (
     <>
-      <h2>Add new department</h2>
-      <form action={handleSubmit}>
+      <h2 id="formTitle">Add new department</h2>
+      <div id="departmentFormContainer">
+      <form id="departmentForm" action={handleSubmit}>
         <label>
           Name
           <input type="text" name="name" required />
@@ -41,6 +42,7 @@ export default function DepartmentForm() {
         </label>
         <button type="submit">Add department</button>
       </form>
+      </div>
     </>
   );
 }
