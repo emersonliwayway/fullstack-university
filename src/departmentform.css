@@ -42,7 +42,11 @@ button{
     border: none;
     background-color: transparent;
     transition: all 1s ease;
+    color: white;
+    font-size: large;
+    border-radius: 5px;
 }
 button:hover{
     background-color: lightblue;
+    color: black;
 }

@@ -35,8 +35,9 @@ export default function FacultyForm() {
   };
   return (
     <>
-      <h2>Add faculty member</h2>
-      <form action={handleSubmit}>
+      <h2 id="formTitleFaculty">Add faculty member</h2>
+      <div id="facultyFormContainer">
+      <form id="facultyForm" action={handleSubmit}>
         <label>
           Name
           <input type="text" name="name" required />
@@ -62,6 +63,7 @@ export default function FacultyForm() {
         </label>
         <button type="submit">Add faculty member</button>
       </form>
+      </div>
     </>
   );
 }

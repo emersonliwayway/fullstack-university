@@ -14,6 +14,7 @@ import "./facultydetails.css"
 import "./department.css"
 import "./departmentpage.css"
 import "./departmentform.css"
+import "./facultyform.css"
 
 function App() {
   // routes here

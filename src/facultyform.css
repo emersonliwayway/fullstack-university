@@ -1,0 +1,30 @@
+#formTitleFaculty{
+    font-family: 'Raleway';
+    font-style: italic;
+    margin: 10px;
+    text-align: center;
+}
+
+#facultyFormContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(lightgrey,white,lightgrey);
+    border-radius: 10px;
+    opacity: 0;
+    transition: all 1s ease;
+    
+    
+
+}
+#facultyFormContainer:hover{
+    opacity: 1;
+}
+#facultyForm{
+        display: flex;
+    flex-direction: column;
+    padding: 10px;
+    justify-content: center;
+    row-gap: 10px;
+    font-family: 'raleway';
+}
