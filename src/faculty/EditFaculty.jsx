@@ -8,7 +8,7 @@ export default function EditFaculty() {
     mutate: updateFaculty,
     loading,
     error,
-  } = useMutation("UPDATE", `/faculty`, ["faculty"]);
+  } = useMutation("PUT", `/faculty/${id}`, ["faculty"]);
 
   const {
     data: departments,
