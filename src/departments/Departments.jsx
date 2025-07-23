@@ -4,6 +4,7 @@ import DepartmentForm from "./DepartmentForm";
 
 export default function Departments() {
   const navigate = useNavigate();
+  
   const {
     data: departments,
     loading,

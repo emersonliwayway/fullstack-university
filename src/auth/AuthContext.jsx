@@ -4,14 +4,35 @@
  * all of which update the token in state.
  */
 
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 
 import { API } from "../api/ApiContext";
 
 const AuthContext = createContext();
 
 export function AuthProvider({ children }) {
-  const [token, setToken] = useState();
+  const [token, setToken] = useState(localStorage.getItem("token") || null);
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    if (!token) return;
+
+    const verify = async () => {
+      const response = await fetch(API + "/users/me", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ jwt: token }),
+      });
+      const result = await response.json();
+      if (!response.ok) throw result;
+
+      setUser(result);
+    };
+
+    verify();
+  }, [token]);
 
   const register = async (credentials) => {
     const response = await fetch(API + "/users/register", {
@@ -36,12 +57,17 @@ export function AuthProvider({ children }) {
     });
     const result = await response.json();
     if (!response.ok) throw result;
-    setToken(result.token);
+
+    localStorage.setItem("token", result);
+    setToken(result);
   };
 
-  const logout = () => setToken(null);
+  const logout = () => {
+    localStorage.removeItem("token");
+    setToken(null);
+  };
 
-  const value = { token, register, login, logout };
+  const value = { user, token, register, login, logout };
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 }
 
