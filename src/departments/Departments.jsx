@@ -19,13 +19,14 @@ export default function Departments() {
     <>
       <h1 id="departmentTitle">Departments</h1>
       {user && <DepartmentForm />}
-
+      <div id="departmentContainer">
       {departments.map((e) => (
         <div key={e.id} onClick={() => navigate(`/departments/${e.id}`)}>
           <h2>{e.name}</h2>
           <img src={e.banner_image} alt={e.name} />
         </div>
       ))}
+      </div>
     </>
   );
 }
