@@ -8,13 +8,20 @@ export default function DepartmentForm() {
   } = useMutation("POST", "/departments", ["departments"]);
 
   const handleSubmit = (FormData) => {
+    if (loading || error) {
+      if (error) console.log(error);
+      // Ensure there's no spam
+      return;
+    }
+
     const name = FormData.get("name");
     const description = FormData.get("description");
     const contact_info = FormData.get("contact");
-    const banner_image = FormData.get("banner_image");
+    const banner_image = FormData.get("banner_image") || "https://randomwordgenerator.com/img/picture-generator/54e6d1474c5bab14f1dc8460962e33791c3ad6e04e507749772f78d69e48cd_640.jpg";
 
     createDepartment({ name, description, banner_image, contact_info });
   };
+
   return (
     <>
       <h2>Add new department</h2>
@@ -32,6 +39,7 @@ export default function DepartmentForm() {
           Contact
           <input type="text" name="contact" required />
         </label>
+        <button>Create</button>
       </form>
     </>
   );

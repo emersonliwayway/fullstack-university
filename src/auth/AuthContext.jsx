@@ -26,7 +26,13 @@ export function AuthProvider({ children }) {
         body: JSON.stringify({ jwt: token }),
       });
       const result = await response.json();
-      if (!response.ok) throw result;
+      if (!response.ok) {
+        console.log("There was an issue processing the token.");
+        localStorage.removeItem("token");
+        setToken(null);
+        setUser(null);
+        return;
+      }
 
       setUser(result);
     };
